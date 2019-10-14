@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(208, 197, 247);
+}
+li{
+    list-style: none;
+}
+.btn{
+    cursor: pointer;
+}
+body{
+    color:#34495e;
+}
+.clicked{
+    color: #7f8c8d;
+}
+.form, .greeting{
+    display: none;
+}
+.showing{
+    display: block;
+}
