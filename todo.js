@@ -5,7 +5,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODOS_LS = 'toDos';
 
 // Array length -> 0
-const toDos = [];
+let toDos = [];
 
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
@@ -20,7 +20,8 @@ function deleteToDo(event){
     const cleanToDos = toDos.filter(function(toDo){
         return toDo.id !== parseInt(li.id);
     });
-    console.log(cleanToDos);
+    roDos = cleantoDos
+    saveToDos();
 }
 
 function paintToDo(text){
