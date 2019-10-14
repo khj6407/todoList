@@ -2,7 +2,7 @@ body{
     background-color: rgb(208, 197, 247);
 }
 li{
-    list-style: none;
+    list-style: none; 
 }
 .btn{
     cursor: pointer;
