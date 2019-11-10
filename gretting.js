@@ -1,40 +1,40 @@
 const form = document.querySelector(".js-form"),
-    input = document.querySelector("input"),
-    greeting = document.querySelector(".js-greetings");
+  input = document.querySelector("input"),
+  greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
-    ShOWING_CN = "showing";
+  ShOWING_CN = "showing";
 
-function saveName(text){
-    localStorage.setItem(USER_LS, text);
-}
-
-function handleSubmit(event){
-    event.preventDefault();
-    const currentValue = input.value;
-    paintGreeting(currentValue);
-    saveName(currentValue);
+function saveName(text) {
+  localStorage.setItem(USER_LS, text);
 }
 
-function askForName(){
-    form.classList.add(ShOWING_CN);
-    form.addEventListener("submit", handleSubmit);
+function handleSubmit(event) {
+  event.preventDefault();
+  const currentValue = input.value;
+  paintGreeting(currentValue);
+  saveName(currentValue);
 }
 
-function paintGreeting(text){
-    form.classList.remove(ShOWING_CN);
-    greeting.classList.add(ShOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+function askForName() {
+  form.classList.add(ShOWING_CN);
+  form.addEventListener("submit", handleSubmit);
 }
-function loadName(){
-    const currentUser = localStorage.getItem(USER_LS);
-    if(currentUser === null){
-        askForName();
-    }else{
-        paintGreeting(currentUser);
-    }
+
+function paintGreeting(text) {
+  form.classList.remove(ShOWING_CN);
+  greeting.classList.add(ShOWING_CN);
+  greeting.innerText = `Hello ${text}!!`;
 }
-function init(){
-    loadName();
+function loadName() {
+  const currentUser = localStorage.getItem(USER_LS);
+  if (currentUser === null) {
+    askForName();
+  } else {
+    paintGreeting(currentUser);
+  }
+}
+function init() {
+  loadName();
 }
 init();

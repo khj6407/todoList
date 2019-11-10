@@ -1,21 +1,115 @@
-body{
-    background-color: rgb(208, 197, 247);
+body {
+  background-color: #2c3e50;
 }
-li{
-    list-style: none; 
+
+li {
+  list-style: none;
 }
-.btn{
-    cursor: pointer;
+
+.btn {
+  cursor: pointer;
 }
-body{
-    color:#34495e;
+
+body {
+  color: #34495e;
 }
-.clicked{
-    color: #7f8c8d;
+
+.clicked {
+  color: #7f8c8d;
 }
-.form, .greeting{
-    display: none;
+
+.form,
+.greeting {
+  display: none;
 }
-.showing{
-    display: block;
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bgimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #3d2c50;
+  animation: layerize cubic-bezier(0.4, 0, 0.2, 1) 1200ms 200ms infinite
+    alternate;
+}
+form {
+  text-align: center;
+}
+input {
+  text-align: center;
+  color: #7e8994;
+  font-size: 22px;
+  border-radius: 50px;
+  height: 35px;
+  margin: 4px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.349);
+}
+@keyframes layerize {
+  0% {
+    opacity: 0.4;
+    transform: translate(0, 0);
+    text-shadow: 0 0 transparent, 0em 0em rgba(225, 225, 225, 0.4),
+      0em 0em rgba(225, 225, 225, 0.3), 0em 0em rgba(225, 225, 225, 0.2),
+      0em 0em rgba(225, 225, 225, 0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0.06666em, 0.06666em);
+    text-shadow: 0 0 transparent, 0.03333em 0.03333em rgba(225, 225, 225, 0.4),
+      0.06666em 0.06666em rgba(225, 225, 225, 0.4),
+      0.09999em 0.09999em rgba(225, 225, 225, 0.2),
+      0.1em 0.1em rgba(225, 225, 225, 0.1);
+  }
+}
+h4 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.507);
+}
+.js-weather {
+  margin-left: 80%;
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 2px 4px 3px #333;
+  position: absolute;
+}
+ul.js-toDoList {
+  text-align: center;
+  font-size: 24px;
+}
+ul li {
+  font-weight: bold;
+  color: #3f2601;
+  text-shadow: 2px 2px 3px rgb(168, 167, 167);
+}
+ul li button {
+  border: 3px solid #f7a833;
+  border-radius: 20px;
+  background: #f7a933a8;
+  margin-right: 4px;
+  padding: 2px 6px;
 }
