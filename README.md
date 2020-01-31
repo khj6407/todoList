@@ -1,2 +1,2 @@
 # TodoList
-- [x]Check The Git Repository
+- [x] Check The Git Repository
